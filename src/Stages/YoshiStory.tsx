@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.1.4 public/YS_Render.glb --types --keepnames --transform
 
 import * as THREE from 'three'
 import {AnimationClip} from 'three'
-import React, {useRef} from 'react'
+import React, {useEffect, useRef} from 'react'
 import {useAnimations, useGLTF} from '@react-three/drei'
 import {GLTF} from 'three-stdlib'
 
@@ -272,6 +272,13 @@ export default function YoshiStory(props: JSX.IntrinsicElements['group']) {
     const group = useRef<THREE.Group>(null)
     const {nodes, materials, animations} = useGLTF('/YS_Render-transformed.glb') as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
+
+    // This moves Randall
+    useEffect(() => {
+        actions["ArmatureAction"]?.play()
+    }, [])
+
+
     return (
         <group ref={group} {...props} dispose={null}>
             <group name="model">
