@@ -1,7 +1,6 @@
 import {defineConfig} from "vite"
-//import react from "@vitejs/plugin-react"
-import {r3f} from "@react-three/editor/vite"
+import react from "@vitejs/plugin-react"
 
 export default defineConfig((env) => ({
-    plugins: [r3f()],
+    plugins: [react()],
 }))
