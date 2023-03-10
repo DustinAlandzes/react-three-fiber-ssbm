@@ -166,7 +166,11 @@ type GLTFResult = GLTF & {
 
 export default function Battlefield(props: JSX.IntrinsicElements['group']) {
     const group = useRef<THREE.Group>(null)
-    const {nodes, materials, animations} = useGLTF('/Battlefield_render-transformed.glb') as unknown as GLTFResult
+    const {
+        nodes,
+        materials,
+        animations
+    } = useGLTF(`./Battlefield_render-transformed.glb`) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
     return (
         <group ref={group} {...props} dispose={null}>
