@@ -8,6 +8,7 @@ import {AnimationClip} from 'three'
 import React, {useRef} from 'react'
 import {useAnimations, useGLTF} from '@react-three/drei'
 import {GLTF} from 'three-stdlib'
+import fountainOfDreamsGlb from '/Fountain_render-transformed.glb?url'
 
 type ActionName = 'new_anim.004' | 'new_anim'
 
@@ -269,7 +270,7 @@ type GLTFResult = GLTF & {
 
 export default function FountainOfDreams(props: JSX.IntrinsicElements['group']) {
     const group = useRef<THREE.Group>(null)
-    const {nodes, materials, animations} = useGLTF('/Fountain_render-transformed.glb') as unknown as GLTFResult
+    const {nodes, materials, animations} = useGLTF(fountainOfDreamsGlb) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
     return (
         <group ref={group} {...props} dispose={null}>

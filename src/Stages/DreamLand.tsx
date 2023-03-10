@@ -8,6 +8,7 @@ import {AnimationClip} from 'three'
 import React, {useRef} from 'react'
 import {useAnimations, useGLTF} from '@react-three/drei'
 import {GLTF} from 'three-stdlib'
+import dreamLandGlb from '/Dreamland_render-transformed.glb?url'
 
 type ActionName = 'whispy_idle'
 
@@ -137,7 +138,7 @@ type GLTFResult = GLTF & {
 
 export default function DreamLand(props: JSX.IntrinsicElements['group']) {
     const group = useRef<THREE.Group>(null)
-    const {nodes, materials, animations} = useGLTF('/Dreamland_render-transformed.glb') as unknown as GLTFResult
+    const {nodes, materials, animations} = useGLTF(dreamLandGlb) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
     return (
         <group ref={group} {...props} dispose={null}>
