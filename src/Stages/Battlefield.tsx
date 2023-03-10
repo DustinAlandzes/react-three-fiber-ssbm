@@ -8,7 +8,6 @@ import {AnimationClip} from 'three'
 import React, {useRef} from 'react'
 import {PerspectiveCamera, useAnimations, useGLTF} from '@react-three/drei'
 import {GLTF} from 'three-stdlib'
-import battlefieldGlb from '/Battlefield_render-transformed.glb?url'
 
 type ActionName = 'new_anim' | 'new_anim.002' | 'new_anim.003' | 'new_anim.007' | 'new_anim.001' | 'new_anim.005'
 
@@ -167,7 +166,7 @@ type GLTFResult = GLTF & {
 
 export default function Battlefield(props: JSX.IntrinsicElements['group']) {
     const group = useRef<THREE.Group>(null)
-    const {nodes, materials, animations} = useGLTF(battlefieldGlb) as unknown as GLTFResult
+    const {nodes, materials, animations} = useGLTF('/Battlefield_render-transformed.glb') as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
     return (
         <group ref={group} {...props} dispose={null}>

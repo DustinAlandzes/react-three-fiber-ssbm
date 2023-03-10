@@ -8,7 +8,6 @@ import {AnimationClip} from 'three'
 import React, {useRef} from 'react'
 import {PerspectiveCamera, useAnimations, useGLTF} from '@react-three/drei'
 import {GLTF} from 'three-stdlib'
-import pokemonStadiumGlb from '/PokemonStadium_render-transformed.glb?url'
 
 type ActionName =
     'Armature.005Action.001'
@@ -679,7 +678,7 @@ type GLTFResult = GLTF & {
 
 export default function PokemonStadium(props: JSX.IntrinsicElements['group']) {
     const group = useRef<THREE.Group>(null)
-    const {nodes, materials, animations} = useGLTF(pokemonStadiumGlb) as unknown as GLTFResult
+    const {nodes, materials, animations} = useGLTF('/PokemonStadium_render-transformed.glb') as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
     return (
         <group ref={group} {...props} dispose={null}>

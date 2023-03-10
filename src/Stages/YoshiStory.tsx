@@ -8,7 +8,6 @@ import {AnimationClip} from 'three'
 import React, {useEffect, useRef} from 'react'
 import {useAnimations, useGLTF} from '@react-three/drei'
 import {GLTF} from 'three-stdlib'
-import yoshiStoryGlb from '/YS_Render-transformed.glb?url'
 
 type ActionName = 'new_anim.001' | 'model_skeletonAction' | 'new_anim' | 'ArmatureAction'
 
@@ -271,7 +270,7 @@ type GLTFResult = GLTF & {
 
 export default function YoshiStory(props: JSX.IntrinsicElements['group']) {
     const group = useRef<THREE.Group>(null)
-    const {nodes, materials, animations} = useGLTF(yoshiStoryGlb) as unknown as GLTFResult
+    const {nodes, materials, animations} = useGLTF('/YS_Render-transformed.glb') as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
 
     // This moves Randall
