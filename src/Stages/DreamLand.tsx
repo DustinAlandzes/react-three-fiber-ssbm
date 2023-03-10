@@ -141,7 +141,7 @@ export default function DreamLand(props: JSX.IntrinsicElements['group']) {
         nodes,
         materials,
         animations
-    } = useGLTF(`./Dreamland_render-transformed.glb`) as unknown as GLTFResult
+    } = useGLTF(`${import.meta.env.BASE_URL}/Dreamland_render-transformed.glb`) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
     return (
         <group ref={group} {...props} dispose={null}>

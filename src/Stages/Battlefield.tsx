@@ -170,7 +170,7 @@ export default function Battlefield(props: JSX.IntrinsicElements['group']) {
         nodes,
         materials,
         animations
-    } = useGLTF(`./Battlefield_render-transformed.glb`) as unknown as GLTFResult
+    } = useGLTF(`${import.meta.env.BASE_URL}/Battlefield_render-transformed.glb`) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
     return (
         <group ref={group} {...props} dispose={null}>

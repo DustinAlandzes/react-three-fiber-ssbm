@@ -270,7 +270,11 @@ type GLTFResult = GLTF & {
 
 export default function YoshiStory(props: JSX.IntrinsicElements['group']) {
     const group = useRef<THREE.Group>(null)
-    const {nodes, materials, animations} = useGLTF('./YS_Render-transformed.glb') as unknown as GLTFResult
+    const {
+        nodes,
+        materials,
+        animations
+    } = useGLTF(`${import.meta.env.BASE_URL}/YS_Render-transformed.glb`) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
 
     // This moves Randall
