@@ -273,7 +273,7 @@ export default function FountainOfDreams(props: JSX.IntrinsicElements['group']) 
         nodes,
         materials,
         animations
-    } = useGLTF(`${import.meta.env.BASE_URL}/Fountain_render-transformed.glb`) as unknown as GLTFResult
+    } = useGLTF(`/react-three-fiber-ssbm/Fountain_render-transformed.glb`) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
     return (
         <group ref={group} {...props} dispose={null}>

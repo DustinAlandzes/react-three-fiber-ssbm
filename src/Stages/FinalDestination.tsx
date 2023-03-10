@@ -165,7 +165,7 @@ export default function FinalDestination(props: JSX.IntrinsicElements['group']) 
         nodes,
         materials,
         animations
-    } = useGLTF(`${import.meta.env.BASE_URL}/FinalDestination_render-transformed.glb`) as unknown as GLTFResult
+    } = useGLTF(`/react-three-fiber-ssbm/FinalDestination_render-transformed.glb`) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
     return (
         <group ref={group} {...props} dispose={null}>
