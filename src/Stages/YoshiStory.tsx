@@ -274,7 +274,7 @@ export default function YoshiStory(props: JSX.IntrinsicElements['group']) {
         nodes,
         materials,
         animations
-    } = useGLTF(`/react-three-fiber-ssbm/YS_Render-transformed.glb`) as unknown as GLTFResult
+    } = useGLTF(` ./YS_Render-transformed.glb`) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
 
     // This moves Randall
