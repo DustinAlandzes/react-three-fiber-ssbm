@@ -278,7 +278,7 @@ export default function YoshiStory(props: JSX.IntrinsicElements['group']) {
     const {actions} = useAnimations(animations, group)
 
     const music = new Audio("music/YoshiStory.mp3");
-
+    music.loop = true;
     useEffect(() => {
         // This moves Randall
         actions["ArmatureAction"]?.play()
