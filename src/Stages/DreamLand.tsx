@@ -143,7 +143,7 @@ export default function DreamLand(props: JSX.IntrinsicElements['group']) {
         animations
     } = useGLTF(`Dreamland_render-transformed.glb`) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
-    const audio = new Audio("./music/DreamLand.mp3")
+    const audio = new Audio("music/DreamLand.mp3")
     useEffect(() => {
         audio.play()
         actions.whispy_idle?.play()
