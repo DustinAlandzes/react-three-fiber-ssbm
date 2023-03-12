@@ -277,9 +277,15 @@ export default function YoshiStory(props: JSX.IntrinsicElements['group']) {
     } = useGLTF(` ./YS_Render-transformed.glb`) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
 
-    // This moves Randall
+    const music = new Audio("./music/YoshiStory.mp3");
+
     useEffect(() => {
+        // This moves Randall
         actions["ArmatureAction"]?.play()
+        music.play()
+        return () => {
+            music.pause()
+        }
     }, [])
 
 

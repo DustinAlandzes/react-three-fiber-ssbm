@@ -7,18 +7,26 @@ import DreamLand from "./Stages/DreamLand";
 import Battlefield from "./Stages/Battlefield";
 import FountainOfDreams from "./Stages/FountainOfDreams";
 import FinalDestination from "./Stages/FinalDestination";
+import HyruleTemple from "./Stages/HyruleTemple";
+import PokemonStadium from "./Stages/PokemonStadium";
+import {HomeRunStadium} from "./Stages/HomeRunStadium";
 import Slippi from "./Slippi";
 
 enum Stage {
     DreamLand = "Dream Land",
-    YoshiStory = "Yoshi Story",
+    YoshiStory = "Yoshi's Story",
     Battlefield = "Battlefield",
     FinalDestination = "Final Destination",
-    FountainOfDreams = "Fountain of Dreams"
+    FountainOfDreams = "Fountain of Dreams",
+    HyruleTemple = "Hyrule Temple",
+    PokemonStadium = "Pokemon Stadium",
+    HomeRunStadium = "Home Run Stadium"
 }
 
 function StageToComponent(stage: Stage): JSX.Element {
     switch (stage) {
+        case Stage.HomeRunStadium:
+            return <HomeRunStadium/>
         case Stage.FinalDestination:
             return <FinalDestination/>
         case Stage.FountainOfDreams:
@@ -29,6 +37,10 @@ function StageToComponent(stage: Stage): JSX.Element {
             return <DreamLand/>;
         case Stage.YoshiStory:
             return <YoshiStory/>;
+        case Stage.HyruleTemple:
+            return <HyruleTemple/>;
+        case Stage.PokemonStadium:
+            return <PokemonStadium/>
     }
 }
 
@@ -45,6 +57,8 @@ function App(): JSX.Element {
                 <pointLight position={[10, 10, 10]}/>
                 <OrbitControls/>
                 <Slippi/>
+                {/*<DonkeyKong/>*/}
+                {/*<Yoshi/>*/}
                 {StageToComponent(stage as Stage)}
             </Canvas>
         </div>

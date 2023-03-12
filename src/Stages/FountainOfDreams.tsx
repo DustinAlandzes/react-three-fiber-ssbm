@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.1.4 public/Fountain_render.glb --types --keepnames --tran
 
 import * as THREE from 'three'
 import {AnimationClip} from 'three'
-import React, {useRef} from 'react'
+import React, {useEffect, useRef} from 'react'
 import {useAnimations, useGLTF} from '@react-three/drei'
 import {GLTF} from 'three-stdlib'
 
@@ -273,8 +273,12 @@ export default function FountainOfDreams(props: JSX.IntrinsicElements['group']) 
         nodes,
         materials,
         animations
-    } = useGLTF(`./Fountain_render-transformed.glb`) as unknown as GLTFResult
+    } = useGLTF(`/Fountain_render-transformed.glb`) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
+    useEffect(() => {
+        actions.new_anim?.play()
+        actions['new_anim.004']?.play()
+    }, [])
     return (
         <group ref={group} {...props} dispose={null}>
             <group name="model">

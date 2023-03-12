@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.1.4 public/Dreamland_render.glb --types --keepnames --ins
 
 import * as THREE from 'three'
 import {AnimationClip} from 'three'
-import React, {useRef} from 'react'
+import React, {useEffect, useRef} from 'react'
 import {useAnimations, useGLTF} from '@react-three/drei'
 import {GLTF} from 'three-stdlib'
 
@@ -141,8 +141,17 @@ export default function DreamLand(props: JSX.IntrinsicElements['group']) {
         nodes,
         materials,
         animations
-    } = useGLTF(`./Dreamland_render-transformed.glb`) as unknown as GLTFResult
+    } = useGLTF(`/Dreamland_render-transformed.glb`) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
+    const audio = new Audio("./music/DreamLand.mp3")
+    useEffect(() => {
+        audio.play()
+        actions.whispy_idle?.play()
+
+        return () => {
+            audio.pause()
+        }
+    }, [])
     return (
         <group ref={group} {...props} dispose={null}>
             <group name="Scene">
