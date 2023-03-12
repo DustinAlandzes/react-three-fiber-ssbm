@@ -46,7 +46,7 @@ type GLTFResult = GLTF & {
 }
 
 export default function Slippi(props: JSX.IntrinsicElements['group']) {
-    const {nodes, materials} = useGLTF('/slippi-transformed.glb') as unknown as GLTFResult
+    const {nodes, materials} = useGLTF('slippi-transformed.glb') as unknown as GLTFResult
     return (
         <group {...props} dispose={null}>
             <mesh name="mesh0011" geometry={nodes.mesh0011.geometry} material={materials.colors}

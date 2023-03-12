@@ -273,7 +273,7 @@ export default function FountainOfDreams(props: JSX.IntrinsicElements['group']) 
         nodes,
         materials,
         animations
-    } = useGLTF(`/Fountain_render-transformed.glb`) as unknown as GLTFResult
+    } = useGLTF(`Fountain_render-transformed.glb`) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
     useEffect(() => {
         actions.new_anim?.play()

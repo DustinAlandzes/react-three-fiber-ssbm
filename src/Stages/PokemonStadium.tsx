@@ -682,7 +682,7 @@ export default function PokemonStadium(props: JSX.IntrinsicElements['group']) {
         nodes,
         materials,
         animations
-    } = useGLTF(`/PokemonStadium_render-transformed.glb`) as unknown as GLTFResult
+    } = useGLTF(`PokemonStadium_render-transformed.glb`) as unknown as GLTFResult
     const {actions} = useAnimations(animations, group)
 
     return (

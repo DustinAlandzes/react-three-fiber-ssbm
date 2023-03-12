@@ -286,7 +286,7 @@ type GLTFResult = GLTF & {
 }
 
 export default function HyruleTemple(props: JSX.IntrinsicElements['group']) {
-    const {nodes, materials} = useGLTF('/HyruleTemple-transformed.glb') as unknown as GLTFResult
+    const {nodes, materials} = useGLTF('HyruleTemple-transformed.glb') as unknown as GLTFResult
     return (
         <group {...props} dispose={null}>
             <group name="Armature001" rotation={[Math.PI / 2, 0, 0]}>
