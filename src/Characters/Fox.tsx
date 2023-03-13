@@ -594,7 +594,7 @@ export function Fox(props: JSX.IntrinsicElements['group']) {
 
   const {animation} = useControls({
       animation: {
-          value: "Wait1.003",
+          value: "Attack100Loop",
           options: names,
       }
   })
