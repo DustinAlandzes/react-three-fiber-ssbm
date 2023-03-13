@@ -368,7 +368,7 @@ type GLTFResult = GLTF & {
 
 export function Fox(props: JSX.IntrinsicElements['group']) {
   const group = useRef<THREE.Group>(null)
-  const { nodes, materials, animations } = useGLTF('/Fox_NLATest-transformed.glb') as unknown as GLTFResult
+  const { nodes, materials, animations } = useGLTF('Fox_NLATest-transformed.glb') as unknown as GLTFResult
   const { actions } = useAnimations(animations, group)
   useEffect(() => {
     actions.Attack100Loop?.play()
