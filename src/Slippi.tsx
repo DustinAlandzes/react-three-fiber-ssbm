@@ -101,4 +101,4 @@ export default function Slippi(props: JSX.IntrinsicElements['group']) {
     )
 }
 
-useGLTF.preload('/slippi-transformed.glb')
+useGLTF.preload('slippi-transformed.glb')

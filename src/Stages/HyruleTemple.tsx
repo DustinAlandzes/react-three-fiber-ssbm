@@ -893,4 +893,4 @@ export default function HyruleTemple(props: JSX.IntrinsicElements['group']) {
     )
 }
 
-useGLTF.preload('/HyruleTemple-transformed.glb')
+useGLTF.preload('HyruleTemple-transformed.glb')

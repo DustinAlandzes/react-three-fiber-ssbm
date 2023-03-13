@@ -925,4 +925,4 @@ export default function YoshiStory(props: JSX.IntrinsicElements['group']) {
     )
 }
 
-useGLTF.preload('/YS_Render-transformed.glb')
+useGLTF.preload('YS_Render-transformed.glb')

@@ -1133,4 +1133,4 @@ export default function PokemonStadium(props: JSX.IntrinsicElements['group']) {
     )
 }
 
-useGLTF.preload('/PokemonStadium_render-transformed.glb')
+useGLTF.preload('PokemonStadium_render-transformed.glb')

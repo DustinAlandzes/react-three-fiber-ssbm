@@ -383,4 +383,4 @@ export default function DreamLand(props: JSX.IntrinsicElements['group']) {
     )
 }
 
-useGLTF.preload('/Dreamland_render-transformed.glb')
+useGLTF.preload('Dreamland_render-transformed.glb')

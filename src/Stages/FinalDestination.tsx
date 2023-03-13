@@ -453,4 +453,4 @@ export default function FinalDestination(props: JSX.IntrinsicElements['group']) 
     )
 }
 
-useGLTF.preload('/FinalDestination_render-transformed.glb')
+useGLTF.preload('FinalDestination_render-transformed.glb')

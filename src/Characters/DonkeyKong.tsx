@@ -132,4 +132,4 @@ export default function DonkeyKong(props: JSX.IntrinsicElements['group']) {
     )
 }
 
-useGLTF.preload('/DonkeyKong-transformed.glb')
+useGLTF.preload('DonkeyKong-transformed.glb')

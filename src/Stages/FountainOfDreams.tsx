@@ -943,4 +943,4 @@ export default function FountainOfDreams(props: JSX.IntrinsicElements['group']) 
     )
 }
 
-useGLTF.preload('/Fountain_render-transformed.glb')
+useGLTF.preload('Fountain_render-transformed.glb')

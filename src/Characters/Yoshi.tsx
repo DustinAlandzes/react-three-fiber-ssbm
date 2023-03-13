@@ -50,4 +50,4 @@ export default function Yoshi(props: JSX.IntrinsicElements['group']) {
     )
 }
 
-useGLTF.preload('/Yoshi-transformed.glb')
+useGLTF.preload('Yoshi-transformed.glb')

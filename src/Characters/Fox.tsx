@@ -462,4 +462,4 @@ export function Fox(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/Fox_NLATest-transformed.glb')
+useGLTF.preload('Fox_NLATest-transformed.glb')

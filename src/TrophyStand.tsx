@@ -26,4 +26,4 @@ export function TrophyStand(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/TrophyStand-transformed.glb')
+useGLTF.preload('TrophyStand-transformed.glb')

@@ -431,4 +431,4 @@ export default function Battlefield(props: JSX.IntrinsicElements['group']) {
     )
 }
 
-useGLTF.preload('/Battlefield_render-transformed.glb')
+useGLTF.preload('Battlefield_render-transformed.glb')

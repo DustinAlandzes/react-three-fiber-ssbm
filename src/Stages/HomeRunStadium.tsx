@@ -466,4 +466,4 @@ export function HomeRunStadium(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/HomeRunStadium-transformed.glb')
+useGLTF.preload('HomeRunStadium-transformed.glb')
