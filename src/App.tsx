@@ -11,6 +11,7 @@ import HyruleTemple from "./Stages/HyruleTemple";
 import PokemonStadium from "./Stages/PokemonStadium";
 import {HomeRunStadium} from "./Stages/HomeRunStadium";
 import {Fox} from "./Characters/Fox";
+import {Suspense} from "react";
 
 enum Stage {
     DreamLand = "Dream Land",
@@ -56,7 +57,9 @@ function App(): JSX.Element {
                 <ambientLight/>
                 <pointLight position={[10, 10, 10]}/>
                 <OrbitControls/>
-                <Fox/>
+                <Suspense>
+                    <Fox/>
+                </Suspense>
                 {/*<Slippi/>*/}
                 {/*<DonkeyKong/>*/}
                 {/*<Yoshi/>*/}
