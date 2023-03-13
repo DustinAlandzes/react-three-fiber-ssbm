@@ -145,6 +145,7 @@ export default function DreamLand(props: JSX.IntrinsicElements['group']) {
     const {actions} = useAnimations(animations, group)
     const music = new Audio("music/DreamLand.mp3")
     music.loop = true;
+    music.volume = 0.05;
 
     useEffect(() => {
         music.play()

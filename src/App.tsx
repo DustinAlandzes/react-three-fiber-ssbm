@@ -58,7 +58,7 @@ function App(): JSX.Element {
                 <pointLight position={[10, 10, 10]}/>
                 <OrbitControls/>
                 <Suspense>
-                    <Fox/>
+                <Fox/>
                 </Suspense>
                 {/*<Slippi/>*/}
                 {/*<DonkeyKong/>*/}
